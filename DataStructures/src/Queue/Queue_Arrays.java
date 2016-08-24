@@ -1,10 +1,10 @@
 package Queue;
 
-public class Queue {
+public class Queue_Arrays {
     int front, rear, size,capacity;
     int[] data;
 
- public Queue (int capacity){
+ public Queue_Arrays (int capacity){
     data = new int[capacity];
     this.capacity = capacity;
     size = 0;
@@ -61,7 +61,7 @@ public int Rear(){
 
 public static void main(String[] args){
 	
-	Queue queue = new Queue(5);
+	Queue_Arrays queue = new Queue_Arrays(5);
 	
 	queue.Enqueue(1);
 	
