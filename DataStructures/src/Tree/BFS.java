@@ -3,6 +3,39 @@ package Tree;
 import java.util.LinkedList;
 
 public class BFS {
+
+	public void PrintBFSBruteForce(TreeNode node) {
+		int height = GetHeight(node);
+
+		for (int i = 0; i < height; i++)
+			PrintBFSUsingRecursion(node, i);
+	}
+
+	public int GetHeight(TreeNode node) {
+		if (node == null)
+			return 0;
+
+		int lh = GetHeight(node.left);
+		int rh = GetHeight(node.right);
+
+		if (lh < rh)
+			return rh + 1;
+		else
+			return lh + 1;
+	}
+
+	void PrintBFSUsingRecursion(TreeNode node, int level) {
+		if (node == null)
+			return;
+
+		if (level == 0)
+			System.out.println(node.key);
+		else if (level > 0) {
+			PrintBFSUsingRecursion(node.left, level - 1);
+			PrintBFSUsingRecursion(node.right, level - 1);
+		}
+	}
+
 	public void PrintBFSUsingQueueLib(TreeNode root) {
 		java.util.Queue<TreeNode> queue = new LinkedList<TreeNode>();
 
@@ -84,5 +117,9 @@ public class BFS {
 		tree.PrintBFS(root);
 		System.out.println("BFS");
 		tree.PrintBFSUsingQueueLib(root);
+
+		System.out.println("BFS");
+		tree.PrintBFSBruteForce(root);
+
 	}
 }
