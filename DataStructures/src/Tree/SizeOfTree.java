@@ -19,5 +19,6 @@ public class SizeOfTree {
 		SizeOfTree tree = new SizeOfTree();
 		System.out.println("Size of tree = " + tree.GetSizeOfTree(root));
 		
+		
 	}
 }
