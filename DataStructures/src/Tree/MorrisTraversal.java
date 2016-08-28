@@ -1,6 +1,6 @@
 package Tree;
 
-public class MorrisTravel {
+public class MorrisTraversal {
 
 	public void PrintMorrisTravel(TreeNode root)
 	{
@@ -48,7 +48,7 @@ public class MorrisTravel {
 		root.left.left = new TreeNode(4);
 		root.left.right = new TreeNode(5);
 
-		MorrisTravel tree = new MorrisTravel();
+		MorrisTraversal tree = new MorrisTraversal();
 		System.out.println("Inorder");
 		tree.PrintMorrisTravel(root);
 
