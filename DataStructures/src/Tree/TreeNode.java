@@ -2,14 +2,15 @@ package Tree;
 
 public class TreeNode {
 	
-	int key;
-	TreeNode left,right;
+	public int key;
+	public TreeNode left;
+	public TreeNode right;
 	
 	TreeNode(){
 		
 	}
 	
-	TreeNode(int k){
+	public TreeNode(int k){
 		key = k;
 		left = right = null;
 				
